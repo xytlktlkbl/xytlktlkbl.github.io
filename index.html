@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>cici's personal website-常征的个人网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cici's personal website-常征的个人网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        .about, .portfolio, .contact {
+            margin-bottom: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>我的第一个标题</h1>
-    <p>我的第一个段落。</p>
+    <header>
+        <h1>欢迎来到我的个人网站</h1>
+        <p>这是我的个人空间，分享我的兴趣和作品</p>
+    </header>
+
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#portfolio">作品集</a>
+        <a href="#contact">联系我</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="about">
+            <h2>关于我</h2>
+            <p>你好！我是常征，一名[你的职业或身份]。我热爱[你的兴趣或爱好]，并喜欢分享我的学习和创作。</p>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>作品集</h2>
+            <p>这里展示了我的一些作品：</p>
+            <ul>
+                <li><a href="#">项目 1</a></li>
+                <li><a href="#">项目 2</a></li>
+                <li><a href="#">项目 3</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>联系我</h2>
+            <p>如果你有任何问题或想与我合作，请通过以下方式联系我：</p>
+            <ul>
+                <li>邮箱: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 [你的名字]. 保留所有权利。</p>
+    </footer>
 </body>
 </html>
