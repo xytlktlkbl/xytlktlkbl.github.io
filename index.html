@@ -12,57 +12,41 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        header {
-            background: 
-            linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-            url('images/index_background.jpg') center/cover;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-            min-height: 100px;
-            max-height: 100px;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        header p {
-            font-size: 1.2em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
         nav {
-            background-color: #333;
-            overflow: hidden;
+            background: 
+                linear-gradient(rgba(0,0,0,0.6), 
+                rgba(0,0,0,0.6)),
+                url('nav-bg.jpg') center/cover;
+            min-height: 80px; /* 导航栏高度 */
+            padding: 20px 0;
+            position: relative;
         }
+
         nav a {
             float: left;
             display: block;
-            color: white;
+            color: #fff;
             text-align: center;
-            padding: 14px 20px;
+            padding: 15px 25px;
             text-decoration: none;
+            font-size: 1.1em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
         }
+
         nav a:hover {
-            background-color: #575757;
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
         }
-        .container {
-            padding: 20px;
-        }
-        .about, .portfolio, .contact {
-            margin-bottom: 40px;
-        }
-        footer {
-            background-color: #333;
+
+        /* 新增导航标题 */
+        .nav-title {
+            float: left;
             color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            font-size: 24px;
+            padding: 15px 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
     </style>
 </head>
