@@ -5,111 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cici's personal website-常征的个人网站</title>
     <style>
-        .sidebar {
-            position: fixed; /* 固定定位 */
-            top: 60px;          /* 距离页面顶部 60px */
-            left: 0;         /* 距离页面左侧 0 */
-            width: 250px;    /* 侧边栏宽度 */
-            height: 100%;    /* 侧边栏高度充满整个视口 */
-            background-color: #f4f4f4; /* 背景色 */
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 右侧阴影效果 */
-            overflow-y: auto; /* 当内容过多时允许滚动 */
-        }
         body {
-            font-family: Arial, sans-serif;
-            margin-left: 270px; /* 给侧边栏留出空间 */
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            padding: 0;
         }
+
         nav {
-            margin-left: -250px;              /* 取消 body 的左边距 */
-            width: calc(100% + 250px);         /* 扩展宽度，使 nav 撑满全屏 */
-            background: 
-                linear-gradient(rgba(0,0,0,0.6), 
-                rgba(0,0,0,0.6)),
-                url('images/index_background.jpg') center/cover;
-            height: 40px; /* 导航栏高度 */
-            padding: 20px 0;
-            position: relative;
-        }
-
-        nav a {
-            float: left;
-            display: block;
+            background-color: #333;
             color: #fff;
-            text-align: center;
-            height: 40px;
-            line-height: 40px; /* 行高与容器高度一致 */
-            padding: 0px 25px;
-            text-decoration: none;
-            font-size: 1.1em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            transition: all 0.3s ease;
+            height: 60px;
+            line-height: 60px;
+            padding: 0 15px;
         }
 
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
+        .wrapper {
+            margin-left: 250px; /* 为侧栏预留空间 */
         }
 
-        /* 新增导航标题 */
-        .nav-title {
-            float: left;
-            color: white;
-            font-size: 24px;
-            padding: 20px 10px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .container {
+        .sidebar {
+            position: fixed;
+            top: 60px; /* 如果 nav 高度为 60px */
+            left: 0;
+            width: 250px;
+            height: calc(100% - 60px);
+            background: #f4f4f4;
             padding: 20px;
         }
+
+        .content {
+            padding: 20px;
+        }
+
     </style>
 </head>
-<body>
-    <!-- 固定侧边栏 -->
-    <div class="sidebar">
-    <h2>个人信息</h2>
-    <p>这里是我的个人简介、头像或其他信息。</p>
-    <!-- 可以添加更多个人信息 -->
-    </div>
 
+<body>
+    <!-- 导航栏不受 margin 影响 -->
     <nav>
-        <a href="#about">关于我</a>
-        <a href="#portfolio">课内项目</a>
-        <a href="#portfolio">课外项目</a>
-        <a href="#portfolio">课内项目</a>
-        <a href="#contact">联系我</a>
+        <a href="#">首页</a>
+        <a href="#">关于</a>
+        <a href="#">联系</a>
     </nav>
 
-    <div class="container">
-        <section id="about" class="about">
-            <h2>关于我</h2>
-            <p>你好! 我是常征, 目前就读于中国科学技术大学bangdream it's mygo!!!!!专业。我的主要研究方向是抹茶巴菲，并喜欢分享我的学习和创作。</p>
-        </section>
-
-        <section id="portfolio" class="portfolio">
-            <h2>作品集</h2>
-            <p>这里展示了我的一些作品：</p>
-            <ul>
-                <li><a href="#">项目 1</a></li>
-                <li><a href="#">项目 2</a></li>
-                <li><a href="#">项目 3</a></li>
-            </ul>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>联系我</h2>
-            <p>如果你有任何问题或想与我合作，请通过以下方式联系我：</p>
-            <ul>
-                <li>校内邮箱: <a href="cccccz@mail.ustc.edu.cn">cccccz@mail.ustc.edu.cn</a></li>
-                <li>GitHub: <a href="https://github.com/xytlktlkbl" target="_blank">https://github.com/xytlktlkbl</a></li>
-            </ul>
-        </section>
-    </div>
-
+    <!-- 带有侧栏和内容的容器 -->
+    <div class="wrapper">
+        <aside class="sidebar">
+        <!-- 侧栏内容 -->
+        个人信息
+    </aside>
+    <section class="content">
+      <!-- 主体内容 -->
+      这里是主要内容区域。
+    </section>
+  </div>
 </body>
+
 </html>
