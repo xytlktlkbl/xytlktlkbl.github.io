@@ -7,30 +7,45 @@
     <style>
         .sidebar {
             position: fixed; /* 固定定位 */
-            top: 60px;          /* 距离页面顶部 60px */
-            left: 0;         /* 距离页面左侧 0 */
-            width: 250px;    /* 侧边栏宽度 */
+            top: 60px;          /* 距离页面顶部 */
+            left: 0px;         /* 距离页面左侧 */
+            width: 500px;    /* 侧边栏宽度 */
+            padding-left: 300px;
+            padding-right: 20px;
             height: 100%;    /* 侧边栏高度充满整个视口 */
             background-color: #f4f4f4; /* 背景色 */
-            padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 右侧阴影效果 */
             overflow-y: auto; /* 当内容过多时允许滚动 */
+            box-sizing: border-box;
         }
+
+        .clipped-image {
+            position:fixed;
+            top: 20px;
+            left: 250px;
+            width: 200px; /* 设置图片宽度 */
+            height: 200px; /* 设置图片高度 */
+            object-fit: cover; /* 保证图片填充整个区域 */
+            clip-path: ellipse(50% 40% at 50% 50%);; /* 剪裁成圆形 */
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin-left: 270px; /* 给侧边栏留出空间 */
-            padding: 20px;
+            margin-left: 570px; /* 给侧边栏留出空间 */
+            padding-top: 50px;
+            padding-left: 50px;
             background-color: #f4f4f4;
             color: #333;
         }
         nav {
-            background: 
-                linear-gradient(rgba(0,0,0,0.6), 
-                rgba(0,0,0,0.6)),
-                url('images/index_background.jpg') center/cover;
+            background-color:rgb(125, 138, 138);
             height: 40px; /* 导航栏高度 */
-            padding: 20px 0;
-            position: relative;
+            padding: 20px 580px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin-left: -250px;              /* 取消 body 的左边距 */
+            width: calc(100% + 250px);         /* 扩展宽度，使 nav 撑满全屏 */
         }
 
         nav a {
@@ -70,6 +85,7 @@
 <body>
     <!-- 固定侧边栏 -->
     <div class="sidebar">
+    <img src="images/my_picture.jpg" alt="some_text" class="clipped-image">
     <h2>个人信息</h2>
     <p>这里是我的个人简介、头像或其他信息。</p>
     <!-- 可以添加更多个人信息 -->
@@ -77,7 +93,7 @@
 
     <nav>
         <a href="#about">关于我</a>
-        <a href="#portfolio">课内项目</a>
+        <a href="#portfolio">课内作业</a>
         <a href="#portfolio">课外项目</a>
         <a href="#portfolio">课内项目</a>
         <a href="#contact">联系我</a>
