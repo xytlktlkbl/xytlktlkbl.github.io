@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>cici's personal website-常征的个人网站</title>
     <style>
         .sidebar {
             position: fixed; /* 固定定位 */
-            top: 60px;          /* 距离页面顶部 */
+            top: 20px;          /* 距离页面顶部 */
             left: 0px;         /* 距离页面左侧 */
             width: 500px;    /* 侧边栏宽度 */
             padding-left: 300px;
@@ -20,28 +21,26 @@
         }
 
         .clipped-image {
-            position:fixed;
-            top: 20px;
-            left: 250px;
             width: 200px; /* 设置图片宽度 */
             height: 200px; /* 设置图片高度 */
+            margin-top: 60px;
+            margin-left: -10px;
             object-fit: cover; /* 保证图片填充整个区域 */
             clip-path: ellipse(50% 40% at 50% 50%);; /* 剪裁成圆形 */
         }
 
         body {
             font-family: Arial, sans-serif;
-            margin-left: 570px; /* 给侧边栏留出空间 */
-            padding-top: 50px;
-            padding-left: 50px;
+            padding-left: 570px; /* 给侧边栏留出空间 */
+            padding-top: 70px;
             background-color: #f4f4f4;
             color: #333;
         }
         nav {
             background-color:rgb(125, 138, 138);
-            height: 40px; /* 导航栏高度 */
-            padding: 20px 580px;
-            position: fixed;
+            height: 80px; /* 导航栏高度 */
+            padding: 20px 650px;
+            position: absolute;
             top: 0;
             left: 0;
             margin-left: -250px;              /* 取消 body 的左边距 */
@@ -80,39 +79,69 @@
         .container {
             padding: 20px;
         }
+
+        .card-link {
+            text-decoration: none; /* 去掉下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+        }
     </style>
 </head>
 <body>
     <!-- 固定侧边栏 -->
     <div class="sidebar">
     <img src="images/my_picture.jpg" alt="some_text" class="clipped-image">
-    <h2>个人信息</h2>
-    <p>这里是我的个人简介、头像或其他信息。</p>
+    <h2>猫咪要乐奈</h2>
+    <p>🏫中国科学技术大学</p>
+    <p>💻数据科学专业大二生</p>
+    <p>🔭机器学习方向</p>
+    <p>📧邮箱:  cccccz@mail.ustc.edu.cn</p>
+    <p>GitHub:<a href="https://github.com/xytlktlkbl" target="_blank">xytlktlkbl</a></p>
     <!-- 可以添加更多个人信息 -->
     </div>
 
     <nav>
-        <a href="#about">关于我</a>
-        <a href="#portfolio">课内作业</a>
-        <a href="#portfolio">课外项目</a>
-        <a href="#portfolio">课内项目</a>
-        <a href="#contact">联系我</a>
+        <a href="index.html">魔法猫咪要乐奈</a>
+        <a href="class.html">课内作业</a>
+        <a href="extra.html">课外项目</a>
+        <a href="coperate.html">合作研究</a>
     </nav>
 
     <div class="container">
+
         <section id="about" class="about">
-            <h2>关于我</h2>
-            <p>你好! 我是常征, 目前就读于中国科学技术大学bangdream it's mygo!!!!!专业。我的主要研究方向是抹茶巴菲，并喜欢分享我的学习和创作。</p>
+            <h2>魔法猫咪要乐奈</h2>
+            <p>你好! 我是要乐奈, 目前就读于中国科学技术大学数据科学专业。</p>
         </section>
 
         <section id="portfolio" class="portfolio">
-            <h2>作品集</h2>
-            <p>这里展示了我的一些作品：</p>
-            <ul>
-                <li><a href="#">项目 1</a></li>
-                <li><a href="#">项目 2</a></li>
-                <li><a href="#">项目 3</a></li>
-            </ul>
+            <a href="class.html">
+                <button type="button" class="btn btn-secondary">
+                    课内作业 <span class="badge bg-secondary">4</span>
+                </button>
+            </a>
+            <a href="class.html" class="card-link">
+            <div class="w-50 h-25 card mb-3">
+                <img src="images/dm.jpg" class="card-img-top" alt="dm">
+                <div class="card-body">
+                  <h5 class="card-title">离散数学作业</h5>
+                  <p class="card-text">我于2024秋季学期修读该课程，部分作业内容仅供参考</p>
+                  <p class="card-text"><small class="text-muted">2/15/2025</small></p>
+                </div>
+            </a>
+        </section>
+
+
+        <section id="extra" class="extra">
+            <button type="button" class="btn btn-secondary">
+                课外项目 <span class="badge bg-secondary">2</span>
+            </button>
+            <div class="w-50 h-25 card mb-3">
+                <img src="images/kaggle.png" class="card-img-top" alt="kaggle">
+                <div class="card-body">
+                  <h5 class="card-title">kaggle房价比赛</h5>
+                  <p class="card-text">还没搞，暂时跳转到github</p>
+                  <p class="card-text"><small class="text-muted">2/15/2025</small></p>
+                </div>
         </section>
 
         <section id="contact" class="contact">
@@ -125,5 +154,6 @@
         </section>
     </div>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </body>
 </html>
