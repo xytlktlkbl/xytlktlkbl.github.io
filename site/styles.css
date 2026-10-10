@@ -13,10 +13,10 @@
 .writing-filters button:hover{border-color:var(--accent)}
 .writing-filters button:focus-visible{outline:3px solid #c49a58;outline-offset:3px}
 #writing-count{font-size:13px;color:var(--muted);white-space:nowrap}
-.writing-entry{display:grid;grid-template-columns:125px minmax(0,1fr) 45px;gap:25px;padding:30px 0;border-bottom:1px solid var(--line)}
+.writing-entry{display:grid;grid-template-columns:125px minmax(0,1fr);gap:25px;padding:30px 0;border-bottom:1px solid var(--line)}
 .writing-entry:last-child{border-bottom:0;padding-bottom:0}
 .writing-date{font-size:14px;color:var(--muted);padding-top:3px}
-.writing-date>span{display:block;font-size:12px;margin-top:6px}
+.writing-date>span{display:block;font-size:12px;margin-top:6px}.writing-date>span+span{margin-top:2px}
 .writing-meta{display:flex;gap:12px;align-items:center;font-size:12px;color:var(--accent);margin-bottom:8px}
 .example-label{color:var(--muted);border:1px solid var(--line);font-size:12px;padding:0 6px;line-height:1.7}
 .writing-entry h3{font:500 24px/1.45 var(--serif)}
@@ -25,7 +25,6 @@
 .writing-tags{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:12px;color:var(--accent)}
 .writing-tags span+span{position:relative}
 .writing-tags span+span::before{content:"/";color:#bfb294;position:absolute;left:-12px}
-.read-entry{font-size:14px;color:var(--accent);align-self:start;padding-top:27px;text-decoration:underline;text-underline-offset:5px}
 .writing-empty{padding:32px 0;color:var(--muted);font-size:16px}
 /* Article reading surface */
 .article-layout{display:grid;grid-template-columns:minmax(0,760px) minmax(160px,1fr);gap:65px;padding:50px 0 35px}
@@ -61,6 +60,6 @@
 .related-writing{margin-top:27px;padding-top:20px;border-top:1px solid var(--line)}
 .related-writing h2{font:24px var(--serif);margin-bottom:13px}
 .related-writing>a{display:block;padding:12px 0;font-size:17px}.related-writing>a>span{display:block;font-size:12px;color:var(--muted)}
-@media(max-width:900px){.header nav{gap:15px}.wordmark-en{letter-spacing:1px}.article-layout{gap:35px;grid-template-columns:minmax(0,1fr) 165px}.article-title{font-size:39px}.writing-entry{grid-template-columns:105px minmax(0,1fr) 35px;gap:18px}}
-@media(max-width:650px){.header nav{gap:6px 15px;justify-content:flex-start}.writing-toolbar{align-items:flex-start;flex-direction:column;gap:12px}.writing-filters button{font-size:14px;padding:8px 12px}.writing-entry{grid-template-columns:minmax(0,1fr) 35px;gap:8px 15px;padding:23px 0}.writing-date{grid-column:1/-1;display:flex;gap:14px;align-items:baseline}.writing-date>span{margin:0}.writing-entry h3{font-size:23px}.writing-meta{margin-top:6px}.read-entry{padding-top:36px}.article-layout{display:block;padding-top:30px}.article-title{font-size:35px;margin-top:16px}.article-meta{margin-top:26px}.article-deck{font-size:18px}.article-toc{display:none}.prose{font-size:16px}.prose h2{font-size:26px}.prose h3{font-size:22px}.article-end{font-size:13px}.article-page .header nav{gap:25px}}
+@media(max-width:900px){.header nav{gap:15px}.wordmark-en{letter-spacing:1px}.article-layout{gap:35px;grid-template-columns:minmax(0,1fr) 165px}.article-title{font-size:39px}.writing-entry{grid-template-columns:105px minmax(0,1fr);gap:18px}}
+@media(max-width:650px){.header nav{gap:6px 15px;justify-content:flex-start}.writing-toolbar{align-items:flex-start;flex-direction:column;gap:12px}.writing-filters button{font-size:14px;padding:8px 12px}.writing-entry{grid-template-columns:minmax(0,1fr);gap:8px 15px;padding:23px 0}.writing-date{grid-column:1/-1;display:flex;gap:14px;align-items:baseline}.writing-date>span{margin:0}.writing-entry h3{font-size:23px}.writing-meta{margin-top:6px}.article-layout{display:block;padding-top:30px}.article-title{font-size:35px;margin-top:16px}.article-meta{margin-top:26px}.article-deck{font-size:18px}.article-toc{display:none}.prose{font-size:16px}.prose h2{font-size:26px}.prose h3{font-size:22px}.article-end{font-size:13px}.article-page .header nav{gap:25px}}
 @media print{.article-layout{display:block}.article-toc,.back-to-writing,.article-end,.related-writing,.writing-filters{display:none}.article-title{font-size:32px}.prose{font-size:12pt}.prose pre{white-space:pre-wrap}}
